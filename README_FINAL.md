@@ -2,11 +2,11 @@
 ## Curso Virtual y Práctico de Reparación de Celulares
 
 ### 🌐 **URL DE LA PLATAFORMA DESPLEGADA**
-**https://7kg837k54ink.space.minimax.io**
+**https://w2d6krbr6avz.space.minimax.io**
 
 ---
 
-## 📋 **PROBLEMAS CRÍTICOS RESUELTOS**
+## ✅ **PROBLEMAS CRÍTICOS RESUELTOS**
 
 ### ✅ **1. Panel de Administrador - Funcionalidad de Subida de Contenido**
 **PROBLEMA:** La interfaz para subir videos, imágenes y documentos NO estaba visible
@@ -27,25 +27,27 @@
 - ✅ Descarga automática de PDF con nombre personalizado
 - ✅ Validación de progreso antes de generar certificado
 
-### ✅ **3. Sistema de Progreso de Estudiantes**
-**PROBLEMA:** Sistema de seguimiento de progreso incompleto
+### ✅ **3. Sistema de Login de Administrador**
+**PROBLEMA CRÍTICO:** El sistema de login de admin NO funcionaba con admin/meproc2024
 **SOLUCIÓN IMPLEMENTADA:**
-- ✅ Funcionalidad para marcar módulos como completados
-- ✅ Progreso visual con porcentaje y barra de progreso
-- ✅ Estadísticas detalladas en dashboard
-- ✅ Datos de prueba creados para demostrar funcionalidad
+- ✅ Creada Edge Function `admin-auth` con credenciales hardcoded
+- ✅ Sistema de validación funcional con admin/meproc2024
+- ✅ Redirección correcta al dashboard de administrador
+- ✅ Sesión persistente y logout limpio
+- ✅ Verificado funcionamiento completo mediante testing automático
 
 ---
 
-## 🔐 **CREDENCIALES DE ACCESO**
+## 🔐 **CREDENCIALES DE ACCESO VERIFICADAS**
 
 ### **Panel de Administrador**
-- **URL:** https://7kg837k54ink.space.minimax.io/admin/login
+- **URL:** https://w2d6krbr6avz.space.minimax.io/admin/login
 - **Usuario:** `admin`
 - **Contraseña:** `meproc2024`
+- **Estado:** ✅ **FUNCIONANDO CORRECTAMENTE**
 
 ### **Panel de Estudiante** (Para pruebas)
-- **URL:** https://7kg837k54ink.space.minimax.io/login
+- **URL:** https://w2d6krbr6avz.space.minimax.io/login
 - **Email:** Se puede crear nueva cuenta o usar la existente
 - **Estudiante de prueba:** Nata (progreso 100% completado)
 
@@ -125,15 +127,16 @@
 - 📱 Diseño completamente responsivo
 
 ### **Backend:**
-- 🛢️ Supabase como Backend-as-a-Service
+- 🛡️ Supabase como Backend-as-a-Service
 - 🔐 Supabase Auth para autenticación
 - 💾 PostgreSQL para base de datos
 - 📁 Supabase Storage para archivos
 - ⚡ Edge Functions para lógica servidor
 
 ### **Edge Functions Implementadas:**
-1. **`file-upload`** - Manejo de subida de archivos desde admin
-2. **`generate-certificate`** - Generación de certificados HTML/PDF
+1. **`admin-auth`** - Autenticación de administradores con credenciales hardcoded
+2. **`file-upload`** - Manejo de subida de archivos desde admin
+3. **`generate-certificate`** - Generación de certificados HTML/PDF
 
 ### **Almacenamiento:**
 - 🪣 Bucket `course-materials` con acceso público
@@ -145,7 +148,7 @@
 ## 🚀 **CÓMO PROBAR LA PLATAFORMA**
 
 ### **1. Probar Panel de Administrador:**
-1. Ir a https://7kg837k54ink.space.minimax.io/admin/login
+1. Ir a https://w2d6krbr6avz.space.minimax.io/admin/login
 2. Iniciar sesión con `admin` / `meproc2024`
 3. **Subir contenido:**
    - Seleccionar un módulo
@@ -155,7 +158,7 @@
 4. **Ver materiales:** Los archivos aparecerán en la lista con opción de eliminar
 
 ### **2. Probar Panel de Estudiante:**
-1. Ir a https://7kg837k54ink.space.minimax.io/register
+1. Ir a https://w2d6krbr6avz.space.minimax.io/register
 2. Crear una cuenta nueva O usar login existente
 3. **Ver progreso:** Dashboard mostrará progreso actual
 4. **Explorar módulos:** Hacer clic en cualquier módulo
@@ -187,11 +190,13 @@ El certificado generado incluye:
 - [x] **Panel Admin funcional:** Interfaz completa para subir contenido multimedia
 - [x] **Generador de certificados visible:** Botón disponible al 100% progreso
 - [x] **Sistema Admin robusto:** Login seguro, gestión de contenido, logout
+- [x] **Login funcionando:** Credenciales admin/meproc2024 validadas y funcionales
 - [x] **Interfaz clara:** Todos los 10 módulos visibles con botones de subida
 - [x] **Funcionalidad completa:** Todas las características funcionan correctamente
 - [x] **Aplicación desplegada:** URL pública accesible
 - [x] **Datos de prueba:** Estudiante con progreso completo para testing
 - [x] **Diseño mantenido:** Fondo mamey, logo azul, interfaz profesional
+- [x] **Testing verificado:** Sistema probado automáticamente y funcionando
 
 ---
 
@@ -202,14 +207,34 @@ El certificado generado incluye:
 La plataforma educativa MEPROC está ahora completamente operativa con todas las funcionalidades solicitadas:
 
 1. **Administradores** pueden subir y gestionar contenido fácilmente
-2. **Estudiantes** pueden completar el curso y generar certificados
-3. **Sistema de progreso** funciona correctamente
-4. **Interfaz profesional** con diseño cristiano moderno
-5. **Arquitectura robusta** usando tecnologías modernas
+2. **Sistema de login** funciona perfectamente con admin/meproc2024
+3. **Estudiantes** pueden completar el curso y generar certificados
+4. **Sistema de progreso** funciona correctamente
+5. **Interfaz profesional** con diseño cristiano moderno
+6. **Arquitectura robusta** usando tecnologías modernas
 
-**🌐 URL FINAL: https://7kg837k54ink.space.minimax.io**
+**🌐 URL FINAL: https://w2d6krbr6avz.space.minimax.io**
+
+---
+
+## 🔧 **CORRECCIÓN DEL PROBLEMA CRÍTICO**
+
+### **Problema Identificado:**
+- El sistema de login de administrador fallaba con "Credenciales de administrador inválidas"
+- Edge Function `admin-auth` no existía
+- Configuración de build de Vite incorrecta
+
+### **Solución Implementada:**
+1. **Creada Edge Function `admin-auth`** con validación hardcoded de credenciales
+2. **Corregido archivo `index.html`** para usar template correcto de Vite
+3. **Rebuild y redespliegue completo** de la aplicación
+4. **Testing automático verificado** del login de administrador
+
+### **Resultado:**
+✅ **LOGIN DE ADMINISTRADOR FUNCIONANDO AL 100%**
 
 ---
 
 *Desarrollado por MiniMax Agent*  
-*Fecha: 28 de agosto de 2025*
+*Fecha: 28 de agosto de 2025*  
+*Última actualización: 28 de agosto de 2025 - 13:25*
